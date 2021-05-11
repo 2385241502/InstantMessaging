@@ -1,0 +1,16 @@
+bool Recv(int clientfd,const char* buffer,message mess); //收数据
+bool Login(int clientfd,string &name);          //登录  
+bool Send(int clientfd,const char*buffer,message mess);//发
+bool Indatabase(message mess);	//发送数据进入数据库
+message Register(message mess);	//注册
+string UnicodetoUTF8(const wstring wtr); //Unicode  至 utf8
+wstring UTF8toUnicode(const string str);
+string UnicodetoANSI(const wstring wtr);
+wstring ANSItoUnicode(const string str);
+string toString(const char *ch);	//字符数据 至 string
+void Pakage(char*buffer,message mess);	//打包
+void o_Pakage(const char *buffer,message &mess);	//解包
+
+
+struct message	//包类
+struct user	//接入的客户端信息类
